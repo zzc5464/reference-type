@@ -67,3 +67,23 @@
 - 其中上面的四种（undefined, number, string, boolean）属于值类型，不是对象。
 - 函数、数组、对象、null、new Number(10)都是对象。他们都是引用类型。
 - 在最新语法中，null和undefined已经合并了。
+## 面试题
+### 01
+      var a = {"x": 1};
+      var b = a;
+      a.x = 2;
+      console.log(b.x);
+> 结果是？
+### 02
+      var a = {"x": 1};
+      var b = a;
+      a.x = 2;
+      console.log(b.x);
+      a = {"x":3};
+      console.log(b.x);
+- 答案：
+* 第一题 2
+* 第二题 2
+- 解析：
+* 第一题，json对象是引用类型，所以a.x更改了真实内存的值,b指向该内存地址。
+* 第二题，a是创建了一个新的对象,所以它指向原来的指针断了，而b仍然指向原地址。
