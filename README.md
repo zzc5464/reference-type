@@ -2,7 +2,7 @@
   
     var num1; //这个时候不进行内存分配
     var num3=9;//分配内存
-    var num4=num3;//会不会分配？
+    var num4=num3;//会不会分配？
     
 - 变量中的引用类型
 > 答案是会分配类型。
@@ -64,13 +64,6 @@
         console.log(typeof (new Number(10)));  //内置对象 引用类型
     }
     show();
--    其中上面的四种（undefined, number, string, boolean）属于值类型，不是对象。
--    函数、数组、对象、null、new Number(10)都是对象。他们都是引用类型。
-    
-            var test ={name:'zzc'};
-            var test2=  test;
-            alert(test === test2);
-            test.name='zhangsan';
-            alert(test2.name);
-
+- 其中上面的四种（undefined, number, string, boolean）属于值类型，不是对象。
+- 函数、数组、对象、null、new Number(10)都是对象。他们都是引用类型。
 - 在最新语法中，null和undefined已经合并了。
